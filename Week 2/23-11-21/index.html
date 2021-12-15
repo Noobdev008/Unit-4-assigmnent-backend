@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Mongo+Express App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container d-flex">
+        <div class="mr-5">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Name</label>
+                <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Name">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
+            </div>
+            <button onclick="searchName()" type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="mr-5">
+            <div class="form-group">
+                <label for="exampleInputEmail1">!Name</label>
+                <input type="text" class="form-control" id="notName" aria-describedby="emailHelp" placeholder="!Name">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div>
+            <select class="custom-select" id="select">
+                <option selected>Choose...</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</body>
+<script>
+    let name = document.getElementById("name");
+    let notName = document.getElementById("notName");
+    let select = document.getElementById("select");
+
+    function searchName() {
+        fetch(`http://localhost/api/name/${name.value}`)
+            .then((res) => res.json())
+            .then((data) => console.log(data))
+            .catch(err => console.log(err))
+    }
+
+</script>
+
+</html>
