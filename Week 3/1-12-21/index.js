@@ -5,7 +5,7 @@ const gallary = require("./Schemas/gallary.schema");
 const upload = require("./utils/file.upload");
 const connet = () => {
   return mongoose.connect(
-    "mongodb+srv://Sourav:Sourav1999@cluster0.jbmyk.mongodb.net/assignment"
+    "mongodb+srv://shubham.sri998@cluster0.jbmyk.mongodb.net/assignment"
   );
 };
 const app = express();
