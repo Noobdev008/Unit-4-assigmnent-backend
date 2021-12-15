@@ -7,7 +7,7 @@ const protect = require("./middlewares/token");
 
 const connet = () => {
   return mongoose.connect(
-    "mongodb+srv://Sourav:Sourav1999@cluster0.jbmyk.mongodb.net/assignment"
+    "mongodb+srv//Shubham:shubham1998@cluster0.jbmyk.mongodb.net/assignment"
   );
 };
 const app = express();
