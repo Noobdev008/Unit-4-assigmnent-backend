@@ -10,7 +10,7 @@ const user = require("./Schemas/user.schema");
 
 const connet = () => {
   return mongoose.connect(
-    "mongodb+srv://Sourav:Sourav1999@cluster0.jbmyk.mongodb.net/assignment"
+    "mongodb+srv://Shubham:shubham1999@cluster0.jbmyk.mongodb.net/assignment"
   );
 };
 const app = express();
